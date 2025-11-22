@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechLearn - Free Tech Courses</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<script src="auth/auth.js"></script>
+
+<body>
+  <!-- Header -->
+  <header>
+      <h1>TechLearn</h1>
+      <nav>
+          <a id="Home" href="index.html">Home</a>
+          <a href="courses-page.html">Courses</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="auth/login.html" class="login-link" id="headerLogin">Login</a>
+          <a href="#" class="login-link" id="headerLogout" style="display:none;">Logout</a>
+      </nav>
+  </header>
+
+<!-- Welcome Message -->
+<div id="welcomeMessage" class="welcome"></div>
+
+
+<script>
+  // Show/hide login/logout in header
+  const loggedUser = localStorage.getItem("loggedInUser");
+  if (loggedUser) {
+    document.getElementById("headerLogin").style.display = "none";
+    document.getElementById("headerLogout").style.display = "inline-block";
+  }
+</script>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Learn Tech for Free 🚀</h2>
+      <p>Master coding, AI, cybersecurity and more with our beginner-friendly online courses.</p>
+      <a href="#" class="btn" onclick="checkLoginAndRedirect(event)">Start Learning</a>
+    </div>
+  </section>
+
+  <script>
+    function checkLoginAndRedirect(event) {
+      event.preventDefault();
+      const loggedUser = localStorage.getItem("loggedInUser");
+      if (loggedUser) {
+        window.location.href = "courses-page.html";
+      } else {
+        alert("⚠️ Please log in to access the courses!");
+        window.location.href = "auth/login.html";
+      }
+    }
+  </script>
+
+  <!-- Popular Courses -->
+  <section class="courses">
+    <h2>Popular Courses</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>💻 Web Development</h3>
+        <p>Learn HTML, CSS, and JavaScript to build your first website.</p>
+      </div>
+      <div class="course-card">
+        <h3>🤖 AI & Machine Learning</h3>
+        <p>Understand how AI models work and build simple ones yourself.</p>
+      </div>
+      <a href="courses/CS basics.html" style="text-decoration: none; color: inherit;">
+        <div class="course-card">
+          <h3>🔒 Cybersecurity Basics</h3>
+          <p>Discover ethical hacking and how to protect your systems online.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <h2>Why Choose TechLearn?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>🌍 100% Free</h3>
+        <p>All our courses are completely free for everyone.</p>
+      </div>
+      <div class="why-card">
+        <h3>📚 Beginner-Friendly</h3>
+        <p>Start from zero with easy-to-follow lessons.</p>
+      </div>
+      <div class="why-card">
+        <h3>💡 Project-ideas</h3>
+        <p>we will give you ideas for project so you can learn urself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <p>Follow us:</p>
+    <div class="social-icons">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+    </div>
+    <p>© 2025 TechLearn. All rights reserved.</p>
+  </footer>
+
+  <script src="auth/auth.js" src="js/script.js"></script>
+  
+</body>
+</html>

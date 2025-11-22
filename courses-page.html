@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses - TechLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>TechLearn</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="auth/login.html" class="login-link" id="headerLogin">Login</a>
+      <a href="#" class="login-link" id="headerLogout" style="display:none;">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Welcome Message -->
+  <div id="welcomeMessage" class="welcome"></div>
+
+  <!-- Courses Hero -->
+  <section class="courses-hero">
+    <h1>🎓 All Courses</h1>
+    <p>Choose a course and start your tech journey today!</p>
+  </section>
+
+  <!-- Course Categories -->
+  <section class="courses">
+    <div class="course-grid">
+      
+      <!-- Web Development Course -->
+      <div class="course-card-detailed">
+        <div class="course-icon">💻</div>
+        <h3>Web Development</h3>
+        <p class="course-level">Beginner to Advanced</p>
+        <p class="course-description">Learn to build modern websites and web applications from scratch.</p>
+        <div class="course-topics">
+          <h4>What you'll learn:</h4>
+          <ul>
+            <li>HTML5 & CSS3 fundamentals</li>
+            <li>Responsive design with Flexbox & Grid</li>
+            <li>JavaScript ES6+ programming</li>
+            <li>DOM manipulation & events</li>
+            <li>Building interactive websites</li>
+            <li>Version control with Git</li>
+          </ul>
+        </div>
+        <div class="project-ideas">
+          <h4>Project Ideas:</h4>
+          <ul>
+            <li>Personal portfolio website</li>
+            <li>To-do list app with local storage</li>
+            <li>Weather app using APIs</li>
+            <li>Restaurant menu page</li>
+            <li>Quiz game with score tracking</li>
+          </ul>
+        </div>
+        <button class="btn-start" onclick="startCourse('Web Development')">Start Learning</button>
+      </div>
+
+      <!-- Python Programming -->
+      <div class="course-card-detailed">
+        <div class="course-icon">🐍</div>
+        <h3>Python Programming</h3>
+        <p class="course-level">Beginner Friendly</p>
+        <p class="course-description">Master one of the most popular programming languages in the world.</p>
+        <div class="course-topics">
+          <h4>What you'll learn:</h4>
+          <ul>
+            <li>Python syntax and fundamentals</li>
+            <li>Data types, variables, and operators</li>
+            <li>Functions and modules</li>
+            <li>Object-oriented programming</li>
+            <li>File handling and exceptions</li>
+            <li>Working with libraries (NumPy, Pandas)</li>
+          </ul>
+        </div>
+        <div class="project-ideas">
+          <h4>Project Ideas:</h4>
+          <ul>
+            <li>Calculator program</li>
+            <li>Password generator</li>
+            <li>Guess the number game</li>
+            <li>Contact book with file storage</li>
+            <li>Web scraper for data collection</li>
+          </ul>
+        </div>
+        <button class="btn-start" onclick="startCourse('Python Programming')">Start Learning</button>
+      </div>
+
+      <!-- AI & Machine Learning -->
+      <div class="course-card-detailed">
+        <div class="course-icon">🤖</div>
+        <h3>AI & Machine Learning</h3>
+        <p class="course-level">Intermediate</p>
+        <p class="course-description">Understand AI concepts and build your own machine learning models.</p>
+        <div class="course-topics">
+          <h4>What you'll learn:</h4>
+          <ul>
+            <li>Introduction to AI and ML concepts</li>
+            <li>Linear regression and classification</li>
+            <li>Neural networks basics</li>
+            <li>Training and testing models</li>
+            <li>Working with TensorFlow/Keras</li>
+            <li>Natural Language Processing basics</li>
+          </ul>
+        </div>
+        <div class="project-ideas">
+          <h4>Project Ideas:</h4>
+          <ul>
+            <li>Handwritten digit recognition</li>
+            <li>Spam email classifier</li>
+            <li>Movie recommendation system</li>
+            <li>Sentiment analysis tool</li>
+            <li>Image classification app</li>
+          </ul>
+        </div>
+        <button class="btn-start" onclick="startCourse('AI & Machine Learning')">Start Learning</button>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="course-card-detailed">
+        <div class="course-icon">🔒</div>
+        <h3>Cybersecurity Basics</h3>
+        <p class="course-level">Beginner to Intermediate</p>
+        <p class="course-description">Learn ethical hacking and how to protect systems from cyber threats.</p>
+        <div class="course-topics">
+          <h4>What you'll learn:</h4>
+          <ul>
+            <li>Network security fundamentals</li>
+            <li>Common vulnerabilities (OWASP Top 10)</li>
+            <li>Password security and encryption</li>
+            <li>Web application security</li>
+            <li>Penetration testing basics</li>
+            <li>Security tools (Nmap, Wireshark)</li>
+          </ul>
+        </div>
+        <div class="project-ideas">
+          <h4>Project Ideas:</h4>
+          <ul>
+            <li>Password strength checker</li>
+            <li>Simple encryption/decryption tool</li>
+            <li>Network scanner</li>
+            <li>Security audit checklist</li>
+            <li>Phishing awareness quiz</li>
+          </ul>
+        </div>
+        <a href="courses/CS basics.html"><button class="btn-start">Start Learning</button></a>
+      </div>
+
+      <!-- Mobile App Development -->
+      <div class="course-card-detailed">
+        <div class="course-icon">📱</div>
+        <h3>Mobile App Development</h3>
+        <p class="course-level">Intermediate</p>
+        <p class="course-description">Build native mobile apps for iOS and Android.</p>
+        <div class="course-topics">
+          <h4>What you'll learn:</h4>
+          <ul>
+            <li>React Native fundamentals</li>
+            <li>Mobile UI/UX design principles</li>
+            <li>Navigation and routing</li>
+            <li>Working with APIs</li>
+            <li>Local storage and state management</li>
+            <li>Publishing apps to stores</li>
+          </ul>
+        </div>
+        <div class="project-ideas">
+          <h4>Project Ideas:</h4>
+          <ul>
+            <li>Note-taking app</li>
+            <li>Expense tracker</li>
+            <li>News reader app</li>
+            <li>Fitness tracker</li>
+            <li>Social media feed clone</li>
+          </ul>
+        </div>
+        <button class="btn-start" onclick="startCourse('Mobile App Development')">Start Learning</button>
+      </div>
+
+      <!-- Data Science -->
+      <div class="course-card-detailed">
+        <div class="course-icon">📊</div>
+        <h3>Data Science</h3>
+        <p class="course-level">Intermediate</p>
+        <p class="course-description">Analyze data and extract meaningful insights using Python.</p>
+        <div class="course-topics">
+          <h4>What you'll learn:</h4>
+          <ul>
+            <li>Data analysis with Pandas</li>
+            <li>Data visualization (Matplotlib, Seaborn)</li>
+            <li>Statistical analysis basics</li>
+            <li>Working with datasets</li>
+            <li>Data cleaning and preprocessing</li>
+            <li>Creating dashboards</li>
+          </ul>
+        </div>
+        <div class="project-ideas">
+          <h4>Project Ideas:</h4>
+          <ul>
+            <li>Sales data analysis</li>
+            <li>COVID-19 tracker dashboard</li>
+            <li>Stock market analyzer</li>
+            <li>Customer segmentation</li>
+            <li>Survey result visualizer</li>
+          </ul>
+        </div>
+        <button class="btn-start" onclick="startCourse('Data Science')">Start Learning</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Learning Tips -->
+  <section class="learning-tips">
+    <h2>💡 Tips for Success</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>1. Practice Daily</h3>
+        <p>Code for at least 30 minutes every day. Consistency is key to mastering programming.</p>
+      </div>
+      <div class="tip-card">
+        <h3>2. Build Projects</h3>
+        <p>Don't just watch tutorials. Build real projects to apply what you learn.</p>
+      </div>
+      <div class="tip-card">
+        <h3>3. Join Communities</h3>
+        <p>Connect with other learners on Discord, Reddit, or Stack Overflow for support.</p>
+      </div>
+      <div class="tip-card">
+        <h3>4. Debug & Learn</h3>
+        <p>Don't fear errors. Debugging is where the real learning happens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>Follow us:</p>
+    <div class="social-icons">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+    </div>
+    <p>© 2025 TechLearn. All rights reserved.</p>
+  </footer>
+
+  <script src="auth/auth.js"></script>
+  <script>
+    function startCourse(courseName) {
+      const loggedUser = localStorage.getItem("loggedInUser");
+      
+      if (!loggedUser) {
+        alert("🔒 Please log in to access courses!");
+        window.location.href = "auth/login.html";
+        return;
+      }
+      
+      // If logged in, show course start message
+      const messages = {
+        'Web Development': '🚀 Start by learning HTML basics! Create a simple webpage about yourself.',
+        'Python Programming': '🐍 Install Python and write your first Hello World program!',
+        'AI & Machine Learning': '🤖 Prerequisites: Python basics. Start with linear regression!',
+        'Cybersecurity Basics': '🔒 Start by learning about network basics and common security threats!',
+        'Mobile App Development': '📱 Prerequisites: JavaScript knowledge. Install React Native!',
+        'Data Science': '📊 Prerequisites: Python basics. Install Jupyter Notebook!'
+      };
+      
+      alert(messages[courseName]);
+      // Here you could redirect to individual course pages in the future
+      // window.location.href = `course-${courseName.toLowerCase().replace(/\s+/g, '-')}.html`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - TechLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>TechLearn</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="auth/login.html" class="login-link" id="headerLogin">Login</a>
+      <a href="#" class="login-link" id="headerLogout" style="display:none;">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Welcome Message -->
+  <div id="welcomeMessage" class="welcome"></div>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <h1>Get In Touch</h1>
+    <p>Have questions? We'd love to hear from you!</p>
+  </section>
+  
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>📧 Contact Information</h2>
+        <p>Feel free to reach out to us through any of these channels:</p>
+        
+        <div class="contact-method">
+          <h3>📮 Email</h3>
+          <p><a href="mailto:Benariealon@gmail.com">support@techlearn.com</a></p>
+          <p class="method-desc">For general inquiries and support</p>
+        </div>
+
+        <div class="contact-method">
+          <h3>💬 Community</h3>
+          <p>Join our Discord server</p>
+          <p class="method-desc">Connect with other learners and get help</p>
+        </div>
+
+        <div class="contact-method">
+          <h3>🐦 Social Media</h3>
+          <p>Follow us on Twitter @TechLearn</p>
+          <p class="method-desc">Stay updated with latest courses</p>
+        </div>
+
+        <div class="contact-method">
+          <h3>⏰ Response Time</h3>
+          <p>We typically respond within 24-48 hours</p>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="example" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="learntech@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a topic...</option>
+              <option value="general">General Inquiry</option>
+              <option value="technical">Technical Support</option>
+              <option value="course">Course Question</option>
+              <option value="feedback">Feedback</option>
+              <option value="partnership">Partnership</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message ✉️</button>
+        </form>
+        <div id="formResponse" class="form-response"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Is TechLearn really free?</h3>
+        <p>Yes! All our courses are 100% free with no hidden costs or premium tiers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need prior experience?</h3>
+        <p>No! Most of our courses are designed for complete beginners. We'll guide you step by step.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I get a certificate?</h3>
+        <p>Currently, we focus on practical learning. Certificates may be added in the future.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I get help if I'm stuck?</h3>
+        <p>Join our community Discord server where you can ask questions and get help from other learners.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I suggest a new course?</h3>
+        <p>Absolutely! Use the contact form above to suggest topics you'd like to learn.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How often is content updated?</h3>
+        <p>We regularly update our courses to reflect the latest technologies and best practices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>Follow us:</p>
+    <div class="social-icons">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+    </div>
+    <p>© 2025 TechLearn. All rights reserved.</p>
+  </footer>
+
+  <script src="auth/auth.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
